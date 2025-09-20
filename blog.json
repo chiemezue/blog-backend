@@ -1,0 +1,65 @@
+[
+  {
+    "id": 3,
+    "title": "Simple Habits for Better Wellness",
+    "category": "wellness",
+    "subtitle": "Small, consistent lifestyle changes can significantly improve your overall wellness.",
+    "content": "<p>Wellness is not about drastic changes but about incorporating small habits into your daily life. Drinking enough water, eating balanced meals, moving your body regularly, and getting sufficient sleep all contribute to better health. Additionally, mental wellness can be boosted by practicing gratitude and making time for hobbies that bring joy. By stacking simple, healthy habits, you create a sustainable lifestyle that supports your physical, emotional, and mental well-being in the long run.</p>",
+    "readingTime": "3",
+    "imagePath": "against-light-7572922_1280.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Mindfulness Practices for Beginners",
+    "category": "mindfulness",
+    "subtitle": "Mindfulness helps you stay present, reduce anxiety, and find calm in your daily routine.",
+    "content": "<p>Mindfulness is the practice of paying attention to the present moment without judgment. Beginners can start with simple exercises such as deep breathing, body scans, or mindful eating. These practices train the mind to slow down, notice details, and reduce overthinking. Over time, mindfulness can improve focus, reduce anxiety, and enhance overall emotional regulation. Even five minutes of mindfulness practice daily can have a powerful effect on your mood and stress levels.</p>",
+    "readingTime": "5",
+    "imagePath": "earth-2611137_1280.jpg"
+  },
+  {
+    "id": 5,
+    "title": "How to Build Self-Confidence",
+    "category": "personal-growth",
+    "subtitle": "Confidence comes from consistent practice, self-awareness, and celebrating progress.",
+    "content": "<p>Building self-confidence is a journey that requires both inner work and outward action. Start by identifying your strengths and acknowledging past achievements, no matter how small. Set realistic goals and push yourself outside of your comfort zone in manageable steps. Practice positive self-talk to counter negative beliefs, and surround yourself with people who uplift and support you. Over time, confidence becomes a natural part of how you view yourself and your abilities, allowing you to pursue opportunities fearlessly.</p>",
+    "readingTime": "4",
+    "imagePath": "balance-6157258_1280.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Goal Setting for Personal Success",
+    "category": "personal-growth",
+    "subtitle": "Clear and structured goals are the foundation of lasting personal achievement.",
+    "content": "<p>Setting goals gives you direction, motivation, and a sense of purpose. To achieve success, use the SMART method: Specific, Measurable, Achievable, Relevant, and Time-bound. Break big goals into smaller, actionable steps, and track your progress regularly. Stay flexible and adjust your goals when necessary, as growth often comes with unexpected changes. By staying consistent and focused, your goals will transform from ideas into reality, bringing both personal and professional fulfillment.</p>",
+    "readingTime": "4",
+    "imagePath": "keep-in-good-health-723471_1280.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Balancing Work and Life",
+    "category": "lifestyle",
+    "subtitle": "Creating harmony between work and personal life prevents burnout and improves happiness.",
+    "content": "<p>Maintaining a work-life balance is essential for long-term productivity and well-being. This means setting boundaries with work hours, learning to say no when necessary, and prioritizing time for rest, family, and hobbies. Technology makes it easy to stay connected, but it also blurs the line between personal and professional life. Practicing digital detoxes, taking vacations, and having regular downtime are crucial to restoring energy and creativity. When balance is achieved, both your work performance and personal satisfaction improve.</p>",
+    "readingTime": "6",
+    "imagePath": "people-4003048_1280.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Healthy Routines for Daily Wellness",
+    "category": "wellness",
+    "subtitle": "A strong morning and evening routine lays the foundation for a productive and healthy life.",
+    "content": "<p>Daily routines create stability and structure in your life. A healthy morning routine might include hydration, stretching, meditation, and a nutritious breakfast, while an evening routine could involve reading, journaling, or preparing for the next day. Routines reduce decision fatigue and free up mental energy for more important tasks. By prioritizing self-care in your daily schedule, you create a lifestyle that supports both short-term productivity and long-term wellness.</p>",
+    "readingTime": "5",
+    "imagePath": "sunset-5076437_1280.jpg"
+  },
+  {
+    "id": 10,
+    "title": "The Importance of Gratitude",
+    "category": "mental-health",
+    "subtitle": "Practicing gratitude daily can shift your perspective and boost your emotional well-being.",
+    "content": "<p>Gratitude is a simple yet transformative practice that trains your mind to focus on abundance rather than scarcity. By writing down three things you’re grateful for each day, you can gradually shift your perspective toward positivity. Gratitude improves mood, strengthens relationships, and even supports better physical health by lowering stress hormones. Over time, gratitude becomes a mindset that allows you to find joy in small moments and build resilience against life’s challenges.</p>",
+    "readingTime": "3",
+    "imagePath": "keep-in-good-health-723471_1280.jpg"
+  }
+]
