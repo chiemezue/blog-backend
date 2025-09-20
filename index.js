@@ -13,7 +13,6 @@ app.use(
   cors({
     origin: "*",
     methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
-    credentials: true, // optional, if you use cookies/auth
   })
 );
 
