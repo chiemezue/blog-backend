@@ -40,11 +40,16 @@ app.post("/api/submitBlog", upload.single("image"), (req, res) => {
   const { title, subtitle, category, content, readingTime } = req.body;
   const imageFile = req.file; // uploaded file
 
+  // Read the current blog data
   let data = fs.readFileSync("./blog.json", "utf8");
-  blogData = JSON.parse(data);
+  let blogData = JSON.parse(data);
 
-  newData = {
-    id: blogData.length + 1,
+  // Find the highest existing ID
+  const highestId =
+    blogData.length > 0 ? Math.max(...blogData.map((blog) => blog.id)) : 0;
+
+  const newData = {
+    id: highestId + 1, // new ID is always higher than the current highest
     title: title,
     subtitle: subtitle,
     category: category,
