@@ -3,6 +3,7 @@ import cors from "cors";
 import multer from "multer";
 import fs from "fs";
 import dotenv from "dotenv";
+import bcrypt from "bcrypt";
 
 dotenv.config();
 
@@ -32,8 +33,9 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-let blogData;
+let users;
 
+let blogData;
 let newData;
 
 app.post("/api/submitBlog", upload.single("image"), (req, res) => {
@@ -104,6 +106,80 @@ app.delete("/blogs/:id", (req, res) => {
     res.send(`Blog has been successfully deleted`);
   } else {
     console.log(`Not found`);
+  }
+});
+
+app.post("/register", async (req, res) => {
+  try {
+    const { username, email, password } = req.body;
+    const hashedPashword = await bcrypt.hash(password, 10);
+
+    const data = fs.readFileSync("./users.json", "utf-8");
+    users = JSON.parse(data);
+
+    const singleUsername = users.find(
+      (singleUser) => singleUser.username === username
+    );
+
+    const singleEmail = users.find(
+      (singleEmail) => singleEmail.email === email
+    );
+
+    if (singleUsername) {
+      console.log(`user has been taken`);
+      res.status(400).json({ error: "User has been taken" });
+      return;
+    }
+
+    if (singleEmail) {
+      console.log(`email has been taken`);
+      res.status(400).json({ error: "Email has been taken" });
+      return;
+    }
+
+    const newUser = {
+      username: username,
+      email: email,
+      password: hashedPashword,
+    };
+
+    users.push(newUser);
+
+    fs.writeFileSync("./users.json", JSON.stringify(users, null, 2));
+    res.status(201).json({ success: "User Registered Succesfully" });
+  } catch (error) {
+    console.log(`error putting user`, error);
+  }
+});
+
+app.post("/login", async (req, res) => {
+  try {
+    const { username, password } = req.body;
+    const data = fs.readFileSync("./users.json", "utf-8");
+    users = JSON.parse(data);
+
+    const singleUsername = users.find(
+      (singleUser) => singleUser.username === username
+    );
+
+    if (!singleUsername) {
+      console.log("User not found");
+      res.status(404).json({ error: "User not found" });
+      return;
+    }
+
+    const isValid = await bcrypt.compare(password, singleUsername.password);
+
+    if (!isValid) {
+      console.log("Incorrect password");
+      res.status(401).json({ error: "Password Incorrect" });
+      return;
+    }
+
+    console.log("Login successfully");
+    res.status(200).json({ message: "Login Succesfully" });
+  } catch (error) {
+    console.log("Couldn't login ", error);
   }
 });
 
