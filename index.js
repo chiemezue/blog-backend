@@ -111,7 +111,7 @@ app.delete("/blogs/:id", (req, res) => {
 
 app.post("/register", async (req, res) => {
   try {
-    const { username, email, password } = req.body;
+    const { username, email, password, userType } = req.body;
     const hashedPashword = await bcrypt.hash(password, 10);
 
     const data = fs.readFileSync("./users.json", "utf-8");
@@ -141,6 +141,7 @@ app.post("/register", async (req, res) => {
       username: username,
       email: email,
       password: hashedPashword,
+      userType: userType,
     };
 
     users.push(newUser);
@@ -177,7 +178,9 @@ app.post("/login", async (req, res) => {
     }
 
     console.log("Login successfully");
-    res.status(200).json({ message: "Login Succesfully" });
+    res
+      .status(200)
+      .json({ message: "Login Succesfully", user: singleUsername });
   } catch (error) {
     console.log("Couldn't login ", error);
   }
