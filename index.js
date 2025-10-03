@@ -35,7 +35,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 // ---------- Google OAuth2 setup ----------
-const redirectUrl = "http://localhost:3000/auth/google/callback";
+const redirectUrl = `${process.env.BASE_URL}/auth/google/callback`;
 const oAuth2Client = new OAuth2Client(
   process.env.CLIENT_ID,
   process.env.CLIENT_SECRET,
