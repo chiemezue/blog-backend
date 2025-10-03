@@ -10,5 +10,12 @@
     "email": "olisa@gmail.com",
     "password": "$2b$10$Dc3WmmVxXU88MOwnPRbhP.G5CRWZLdFCMZQ80QgqQXSkL9ypipZuW",
     "userType": "user"
+  },
+  {
+    "id": 1759337533480,
+    "username": "Izuchukwu Sibeudu",
+    "email": "iz.sibeudu@gmail.com",
+    "password": "",
+    "userType": "user"
   }
 ]
